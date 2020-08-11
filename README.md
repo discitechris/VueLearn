@@ -15,3 +15,29 @@ Vue is a progressive JavaScript framework that focuses on building user interfac
 
 The Vue.js 2 core library is very small in size \(only 17 kB\). This ensures that the overhead which is added to your project by using Vue.js is minimal and your website is loading fast.
 
+
+
+```markup
+<div id="app">
+{{ text }} Nice to meet Vue.
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app',
+  data: {
+    text: 'Hello World!'
+  }
+});
+```
+
+```text
+Output: 
+Hello World! Nice to meet Vue.
+```
+
+* **new Vue\(\)** creates a vue instance
+* **el** object - element tag targets \#ids, .class, tagnames any css selectors.
+* **text** object - establishes a relationship with the html using `{{}}` mustache tags
+
