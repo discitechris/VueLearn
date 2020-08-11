@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Vue](README.md)
+* [Introduction](README.md)
 
 ## Directives <a id="directives-1"></a>
 
