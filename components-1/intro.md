@@ -77,7 +77,9 @@ If Vue didn’t have this rule, clicking on one button would affect the data of 
 
 It’s common for an app to be organized into a tree of nested components:
 
-![image](https://github.com/discitechris/VueLearn/tree/0c44486aeffe17ae1078126f74bb0542ef7be6a5/components/components.png)
+![](../.gitbook/assets/components.png)
+
+
 
 For example, you might have components for a header, sidebar, and content area, each typically containing other components for navigation links, blog posts, etc.
 
@@ -487,7 +489,9 @@ Just like with HTML elements, it’s often useful to be able to pass content to 
 </alert-box>
 ```
 
-Which might render something like this: ![image](../.gitbook/assets/slotoutput.jpg)
+Which might render something like this: 
+
+![](../.gitbook/assets/slotoutput.jpg)
 
 Fortunately, this task is made very simple by Vue’s custom `<slot>` element:
 
@@ -504,7 +508,9 @@ Vue.component("alert-box", {
 
 ## Dynamic Components
 
-Sometimes, it’s useful to dynamically switch between components, like in a tabbed interface: ![image](../.gitbook/assets/dynamiccomp.jpg)
+Sometimes, it’s useful to dynamically switch between components, like in a tabbed interface: 
+
+![](../.gitbook/assets/dynamiccomp.jpg)
 
 The above is made possible by Vue’s  element with the **`is`** special attribute:
 
