@@ -187,6 +187,26 @@ data: {
 }
 ```
 {% endtab %}
+
+{% tab title="Boolean Bindings" %}
+Based on the Boolean conditions the active or text-danger class is added to `<div>`
+
+```markup
+<div class= "color-box"
+:class="{active: activeClass, 'text-danger': errorClass }">
+...
+</div>
+<!-- Result -->
+<div class= "color-box active"> ... </div>
+```
+
+```javascript
+data: {
+activeClass: true,
+errorClass: false
+}
+```
+{% endtab %}
 {% endtabs %}
 
 
