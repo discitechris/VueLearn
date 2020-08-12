@@ -1,5 +1,9 @@
 # v-bind \(or\)  :
 
+{% hint style="info" %}
+Dynamically binds an **attribute** to an **expression**  `v-bind:src="expression" or {{expression}}`
+{% endhint %}
+
 We can use it for so many things- class and style binding, creating dynamic props, etc
 
 **Expects**: `any (with argument)` \| `Object (without argument)`
@@ -115,6 +119,8 @@ For more information [Click Here](https://vuejs.org/v2/guide/class-and-style.htm
 
 
 
+### Style Bindings
+
 {% tabs %}
 {% tab title="Style Binding" %}
 ```markup
@@ -166,7 +172,7 @@ data: {
 ```
 {% endtab %}
 
-{% tab title="Multiple Styles Bindings" %}
+{% tab title="Object Arrays" %}
 {% hint style="info" %}
  Multiple Styles declared inside **arrays \( \[ \] \)**
 {% endhint %}
@@ -187,7 +193,11 @@ data: {
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+### Class Bindings
+
+{% tabs %}
 {% tab title="Boolean Bindings" %}
 Based on the Boolean conditions the active or text-danger class is added to `<div>`
 
@@ -204,6 +214,62 @@ Based on the Boolean conditions the active or text-danger class is added to `<di
 data: {
 activeClass: true,
 errorClass: false
+}
+```
+{% endtab %}
+
+{% tab title="Boolean Object" %}
+```markup
+<div :class="classObject">
+...
+</div>
+<!-- Result -->
+<div class= "active"> ... </div>
+```
+
+```javascript
+data: {
+  classObject: {
+    activeClass: true,
+    errorClass: false
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Arrays" %}
+
+
+```markup
+<div :class="[activeClass, errorClass]">...</div>
+<!-- Result -->
+<div class= "active text-danger"> ... </div>
+```
+
+{% code title="vue.js" %}
+```javascript
+data: {
+    activeClass: 'active',
+    errorClass: 'text-danger'
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Conditionals" %}
+
+
+```markup
+<div :class="[isActive ? activeClass: '']">...</div>
+
+<!-- Result -->
+<div class="active">...</div>
+```
+
+```javascript
+data: {
+    isActive: true,
+    activeClass: 'active',
 }
 ```
 {% endtab %}
