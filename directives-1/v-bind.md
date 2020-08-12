@@ -87,10 +87,7 @@ Examples:
 <div :class="[classA, { classB: isB, classC: isC }]">
   <!-- style binding camelCase as using inside objects -->
   <div :style="{ fontSize: size + 'px' }"></div>
-    <!-- style binding with kebab casing if you prefer -->
-   <div :style="{ 'font-size': size + 'px' }"></div>
-   <!-- kebab-case can be converted to camelcase using latest modifier .camel -->
-   <div :style.camel="{ 'font-size': size + 'px' }"></div>
+  
   <div :style="[styleObjectA, styleObjectB]"></div>
 
   <!-- binding an object of attributes -->
