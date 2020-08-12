@@ -85,7 +85,7 @@ Examples:
 <div :class="{ red: isRed }"></div>
 <div :class="[classA, classB]"></div>
 <div :class="[classA, { classB: isB, classC: isC }]">
-  <!-- style binding -->
+  <!-- style binding camelCase as using inside objects -->
   <div :style="{ fontSize: size + 'px' }"></div>
     <!-- style binding with kebab casing if you prefer -->
    <div :style="{ 'font-size': size + 'px' }"></div>
@@ -115,4 +115,82 @@ Examples:
 A common need for data binding is manipulating an element’s class list and its inline styles. Since they are both attributes, we can use v-bind to handle them: we only need to calculate a final string with our expressions. However, meddling with string concatenation is annoying and error-prone. For this reason, Vue provides special enhancements when v-bind is used with class and style. In addition to strings, the expressions can also evaluate to objects or arrays.
 
 For more information [Click Here](https://vuejs.org/v2/guide/class-and-style.html)
+
+
+
+{% tabs %}
+{% tab title="Style Binding" %}
+```markup
+<h1 :style="{color: colorvariable }"></h1>
+```
+
+```javascript
+data: {
+colorvariable: 'red'
+}
+```
+{% endtab %}
+
+{% tab title="Object value" %}
+{% hint style="info" %}
+Because we are declaring in an **Object** we are using **camelCase**
+{% endhint %}
+
+```markup
+<p :style="{fontSize: size }"></p>
+```
+
+{% hint style="info" %}
+Can use **kebab-case** if preferred as long as its in **quotes \( ' ' \)**
+{% endhint %}
+
+```markup
+<p :style="{'font-size': size }"></p>
+```
+
+```javascript
+data: {
+size: '16px'
+}
+```
+{% endtab %}
+
+{% tab title="Objects" %}
+```markup
+<p :style='styleObject'></p>
+```
+
+```javascript
+data: {
+    styleObject: {
+        color: 'red',
+        fontSize: '13px'
+}
+```
+{% endtab %}
+
+{% tab title="Multiple Styles Bindings" %}
+{% hint style="info" %}
+ Multiple Styles declared inside **arrays \( \[ \] \)**
+{% endhint %}
+
+```
+<p :style="[styleObject, styleObject2]"></p>
+```
+
+```markup
+data: {
+    styleObject: {
+        color: 'red',
+        fontSize: '13px'
+}
+    styleoObject2: {
+        border: '10px',
+        padding: '20px'
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
 
