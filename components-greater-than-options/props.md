@@ -1,5 +1,9 @@
 # props
 
+{% hint style="info" %}
+A custom attribute for passing data into our components
+{% endhint %}
+
 ## Passing Data to Components with Props
 
 Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a property on that component instance. To pass a title to our blog post component, we can include it in the list of props this component accepts, using a `props` option:
