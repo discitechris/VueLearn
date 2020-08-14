@@ -1,16 +1,17 @@
 # v-show
 
-Toggles the element’s **`display:none`** CSS property based on the truthy-ness of the expression value.
+{% hint style="info" %}
+**v-show**  is conditional directive triggers transitions when its condition changes.
+{% endhint %}
 
 **Expects:** `any`
 
-This directive triggers transitions when its condition changes.
+* Toggles the element’s **`display:none`** CSS property based on the truthy-ness of the expression value.
+* This can be anything- buttons, forms, divs, components.
 
-Is a conditional that will display information depending on meeting a requirement. This can be anything- buttons, forms, divs, **components**.
-
-Note:
-
-**`v-show`** doesn’t support the `<template>` element, nor does it work with `v-else`.
+{% hint style="warning" %}
+**v-show** doesn’t support the `<template>` element, nor does it work with `v-else`.
+{% endhint %}
 
 HTML:
 
