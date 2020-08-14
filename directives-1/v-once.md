@@ -1,8 +1,13 @@
 # v-once
 
-Render the element and component **once** only. On subsequent re-renders, the element/component and all its children will be treated as static content and skipped. This can be used to optimize update performance.
+{% hint style="info" %}
+Render the element and component **once** only.
+{% endhint %}
 
-Not quite as useful, v-once will not update once it's been rendered.
+ This can be used to optimize update performance.
+
+* On subsequent re-renders, the element/component and all its children will be treated as static content and skipped. 
+* Not quite as useful, v-once will not update once it's been rendered.
 
 HTML:
 
