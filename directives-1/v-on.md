@@ -26,8 +26,6 @@ When listening to native DOM events, the method receives the native event as the
 
 Starting in 2.4.0+, `v-on` also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.
 
-\*\*\*\*
-
 HTML:
 
 ```markup

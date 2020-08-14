@@ -17,7 +17,6 @@
 * [v-html](directives-1/v-html.md)
 * [v-for](directives-1/v-for.md)
 * [v-model](directives-1/v-model.md)
-* [Untitled](directives-1/untitled.md)
 
 ## Instance <a id="instance-1"></a>
 
