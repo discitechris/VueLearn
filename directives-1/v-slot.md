@@ -1,4 +1,14 @@
-# v-slot or \#
+# v-slot \(or\) \#
+
+What is a slot? It’s a space in your component output that is reserved, waiting to be filled.
+
+You define a slot by putting `<slot></slot>` in a component template
+
+```markup
+Vue.component('user-information', {
+  template: '<div class="user-information"><slot></slot></div>'
+})
+```
 
 Denote named slots or slots that expect to receive props.
 
