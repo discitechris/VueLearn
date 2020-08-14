@@ -1,20 +1,32 @@
-# v-on
+# v-on \(or\) @
 
-## v-on \(or\) **@**
+{% hint style="info" %}
+ **`v-on`** allows you to listen to DOM events, and trigger a method when the event happens.
+{% endhint %}
 
-Extremely useful so there's a shortcut! v-on is great for binding to events like click and mouseenter. You're able to pass in a parameter for the event like `(e)`
+**Expects:** `Function` \| `Inline Statement` \| `Object`
 
-Attaches an event listener to the element. The event type is denoted by the argument. The expression can be a method name, an inline statement, or omitted if there are modifiers present.
+**Argument:** `event`
 
-When used on a normal element, it listens to **native DOM events** only. When used on a custom element component, it listens to **custom events** emitted on that child component.
+```markup
+<!-- method/function handler -->
+<button v-on:click="doThis"></button>
+
+<!-- inline statement with argument-->
+<button v-on:click="doThat('hello', $event)"></button>
+
+<!-- object syntax (2.4.0+) -->
+<button v-on="{ mousedown: doThis, mouseup: doThat }"></button>
+```
+
+* When used on a **normal element**, it listens to **native DOM events** only. 
+* When used on a **custom element component**, it listens to **custom events** emitted on that child component.
 
 When listening to native DOM events, the method receives the native event as the only argument. If using inline statement, the statement has access to the special `$event` property: `v-on:click="handle('ok', $event)"`.
 
 Starting in 2.4.0+, `v-on` also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.
 
-**Expects:** `Function` \| `Inline Statement` \| `Object`
-
-**Argument:** `event`
+\*\*\*\*
 
 HTML:
 
@@ -50,6 +62,8 @@ new Vue({
 });
 ```
 
+## Multiple Bindings
+
 Can use multiple bindings on single attribute id
 
 ```markup
@@ -69,9 +83,27 @@ Can use multiple bindings on single attribute id
 ></div>
 ```
 
-We can also use ternaries directly
+{% hint style="info" %}
+> #### We can also use ternaries directly
+>
+> **`<a @click="[isActive ? doSomething: somethingElse ]"> ... </a>`**
+{% endhint %}
 
-## V-on Modifiers
+## Custom Element Components
+
+Listening to custom events on a child component \(the handler is called when “my-event” is emitted on the child\):
+
+```markup
+<my-component @my-event="handleThis"></my-component>
+
+<!-- inline statement -->
+<my-component @my-event="handleThis(123, $event)"></my-component>
+
+<!-- native event on component -->
+<my-component @click.native="onClick"></my-component>
+```
+
+## 'V-on Modifiers
 
 **`.once`** not to be confused with v-once, this click event will be triggered once.
 
@@ -106,19 +138,15 @@ v-on Shorthand
 
 <!-- shorthand with dynamic argument (2.6.0+) -->
 <a @[event]="doSomething"> ... </a>
+
+
 ```
 
 Example:
 
 ```markup
-<!-- method handler -->
-<button v-on:click="doThis"></button>
-
 <!-- dynamic event (2.6.0+) -->
 <button v-on:[event]="doThis"></button>
-
-<!-- inline statement -->
-<button v-on:click="doThat('hello', $event)"></button>
 
 <!-- shorthand -->
 <button @click="doThis"></button>
@@ -146,8 +174,5 @@ Example:
 
 <!-- the click event will be triggered at most once -->
 <button v-on:click.once="doThis"></button>
-
-<!-- object syntax (2.4.0+) -->
-<button v-on="{ mousedown: doThis, mouseup: doThat }"></button>
 ```
 

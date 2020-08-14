@@ -1,8 +1,11 @@
 # v-pre
 
-v-pre will print out the inner text exactly how it is, including code \(good for documentation\)
+{% hint style="info" %}
+**v-pre** will print out the inner text exactly how it is, including code \(good for documentation\)
+{% endhint %}
 
-Skip compilation for this element and all its children. Skipping large numbers of nodes with no directives on them can speed up compilation.
+* Skip compilation for this element and all its children. 
+* Skipping large numbers of nodes with no directives on them can speed up compilation.
 
 HTML:
 
