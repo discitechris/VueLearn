@@ -1,4 +1,4 @@
-# v-slot or
+# v-slot \(or\) \#
 
 Denote named slots or slots that expect to receive props.
 

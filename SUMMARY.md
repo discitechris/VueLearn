@@ -8,7 +8,7 @@
 * [v-once](directives-1/v-once.md)
 * [v-pre](directives-1/v-pre.md)
 * [v-on \(or\) @](directives-1/v-on.md)
-* [v-slot or](directives-1/v-slot.md)
+* [v-slot \(or\) \#](directives-1/v-slot.md)
 * [v-bind \(or\)  :](directives-1/v-bind.md)
 * [v-show](directives-1/v-show.md)
 * [v-if](directives-1/v-if.md)
