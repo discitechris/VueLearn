@@ -4,7 +4,9 @@
 Dynamically binds an **attribute** to an **expression**  `v-bind:src="expression" or {{expression}}`
 {% endhint %}
 
-We can use it for so many things- class and style binding, creating dynamic props, etc
+{% hint style="info" %}
+**v-bind**  is _**one-way**_ binding directive unlike **v-model** which is a _**two-way**_ binding directive
+{% endhint %}
 
 **Expects**: `any (with argument)` \| `Object (without argument)`
 
@@ -12,13 +14,18 @@ We can use it for so many things- class and style binding, creating dynamic prop
 
 **Usage:**
 
-Dynamically bind one or more attributes, or a component prop to an expression.
+* Dynamically bind one or more attributes, or a component prop to an expression.
+* We can use it for so many things  — class and style binding, creating dynamic props, etc
+* When used to bind the `class` or `style` attribute, it supports additional value types such as `Array` or `Objects`.
+* When used for `prop` binding, the prop must be properly declared in the child component.
 
-When used to bind the `class` or `style` attribute, it supports additional value types such as Array or Objects.
+#### 
 
-When used for prop binding, the prop must be properly declared in the child component.
+When used without an argument, can be used to bind an object containing attribute name-value pairs.
 
-When used without an argument, can be used to bind an object containing attribute name-value pairs. **Note** in this mode `class` and `style` does not support Array or Objects
+{% hint style="warning" %}
+in this mode `class` and `style` does not support `Array`or `Objects`
+{% endhint %}
 
 ### Modifiers:
 
