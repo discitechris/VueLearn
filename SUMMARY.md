@@ -4,7 +4,7 @@
 
 ## Directives <a id="directives-1"></a>
 
-* [Introduction](directives-1/directives-1.md)
+* [Directives Introduction](directives-1/directives-1.md)
 * [v-once](directives-1/v-once.md)
 * [v-pre](directives-1/v-pre.md)
 * [v-on](directives-1/v-on.md)
